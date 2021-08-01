@@ -1,0 +1,49 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-container {
+    text-align: center;
+}
+
+.section-title-subtitle {
+    @include text-settings ($subtitle-font-family, 400, 24px);
+
+    margin-bottom: 20px;
+    color: $section-main-color;
+}
+
+.section-title {
+    @include text-settings ($main-font-family, 700, 30px);
+
+    text-transform: uppercase;
+    color: $section-main-color;
+
+    &::after {
+        display: block;
+        content: "";
+        max-width: 60px;
+        height: 3px;
+        background-color: #f38181;
+        margin: 40px auto 60px;
+    }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

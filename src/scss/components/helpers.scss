@@ -1,0 +1,30 @@
+%buttons {
+    border: none;
+    cursor: pointer;
+    color: $header-text_item-color;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+%all-link {
+    text-decoration: none;
+}
+
+%img-correct {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+@mixin text-settings ($family, $weight, $size) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin flexible ($display: flex, $justify: flex-start, $align: stretch) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}

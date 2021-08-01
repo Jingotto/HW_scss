@@ -1,0 +1,36 @@
+.main-titel-section {
+    text-align: center;
+    color: $header-text_item-color;
+}
+
+.main-titel-subtitle {
+    @include text-settings ($subtitle-font-family, normal, 72px);
+    margin-bottom: 40px;
+}
+
+.main-title {
+    @include text-settings ($main-font-family, 700, 150px);
+
+    margin-bottom: 110px;
+    line-height: 140px;
+    text-transform: uppercase;
+}
+
+.main-titel-button {
+    @extend %buttons;
+    @include text-settings ($main-font-family, 700, 14px);
+
+    width: 160px;
+    height: 40px;
+    border: 3px solid $header-text_item-color;
+    color: $header-text_item-color;
+    transition: 0.7s linear;
+
+    &:hover {
+        transform: scale(1.2);
+        color: $header-accent-color;
+        border: 3px solid $header-accent-color;
+    }
+}
+
+

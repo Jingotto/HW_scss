@@ -1,0 +1,49 @@
+.footer-section {
+    @include flexible (flex, space-between, center);
+
+    min-height: 70px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-section-license {
+    @include text-settings ($main-font-family, 400, 14px);
+}
+
+.last-word-link {
+    color: #f38181;
+
+    @extend %all-link;
+}
+
+.footer-form {
+    @include flexible (flex, flex-end, stretch);
+
+    width: 32%;
+}
+
+.footer-form-email-area {
+    border: 1px solid #e7e7e7;
+    width: 60%;
+    height: 40px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.footer-form-button {
+    @extend %buttons;
+    @include text-settings ($main-font-family, 700, 14px);
+
+    background-color: #95e1d3;
+    width: 38%;
+    min-height: 40px;
+}
+
+[placeholder] {
+    @include text-settings ($secondary-font-family, 300, 15px);
+
+    padding: 2.61%;
+    font-style: italic;
+    color: #cccccc;
+}

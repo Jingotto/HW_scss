@@ -1,0 +1,17 @@
+{
+  "name": "hw_scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "scss:build": "node-sass src/scss/style.scss -o css",
+    "scss:watch": "node-sass --watch src/scss/style.scss -o css",
+    "build": "npm run scss:build && npm run scss:watch"
+  },
+  "author": "",
+  "license": "ISC"
+}

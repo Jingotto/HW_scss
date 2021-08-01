@@ -1,0 +1,68 @@
+.header-img {
+    @extend %img-correct;
+    
+    background-image: url('../assets/img/decor-img/header-picture.jpg');
+    min-height: 1000px;
+    margin-bottom: 50px;
+}
+
+.header-section {
+    @include flexible (flex, space-between, center);
+
+    margin-bottom: 190px;
+    padding-top: 30px;
+}
+
+.site-logo {
+    @include text-settings ($main-font-family, 700, 30px);
+    @extend %all-link;
+
+    color: $header-text_item-color;
+}
+
+.nav-menu {
+    width: 51.5%;
+}
+
+.nav-menu-list {
+    @include flexible (flex, space-between, center);
+
+    width: 100%;
+    list-style: none;
+}
+
+.list-item-link {
+    @extend %all-link;
+    @include text-settings ($main-font-family, 400, 14px);
+
+    position: relative;
+    text-transform: uppercase;
+    color: $header-text_item-color;
+
+    &:hover,
+    &:focus {
+        color: $header-accent-color;
+
+        &::after {
+            position: absolute;
+            display: block;
+            margin-top: 10px;
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: $header-accent-color;
+        }
+    }
+}
+
+.nav-menu-button {
+    @extend %buttons;
+        
+    fill: $header-text_item-color;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        fill: $header-accent-color;
+    }
+}
